@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ChessTracker.UcLoadAllClubsAndPlayers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChessTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Klub" FontSize="16" FontWeight="Bold" Margin="10"/>
+
+        <DataGrid Grid.Row="1" x:Name="dgClub" Margin="10" AutoGenerateColumns="False" SelectionChanged="dgClub_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Naziv kluba" Binding="{Binding name}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Adresa" Binding="{Binding address}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Kontakt" Binding="{Binding contact}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Datum osnivanja" Binding="{Binding dateOfEstablishment}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Šahovski savez" Binding="{Binding ChessFederation.name}" Width="Auto"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock Grid.Row="2" Text="Igrači" FontSize="16" FontWeight="Bold" Margin="10"/>
+
+        <DataGrid Grid.Row="3" x:Name="dgPlayers"  Margin="10" AutoGenerateColumns="False" SelectionChanged="dgPlayers_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ime" Binding="{Binding firstName}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Prezime" Binding="{Binding lastName}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Datum rođenja" Binding="{Binding dateOfBirth}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Kontakt" Binding="{Binding contact}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Rating" Binding="{Binding rating}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status.name}" Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="ChessTracker.UcEditPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChessTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Uredi igrača" Background="#B0C4DE" Height="35" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
+
+            <Label Content="Ime:" Grid.Row="1" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <TextBox x:Name="txtFirstName" Grid.Row="1" Grid.Column="1" Margin="10" VerticalContentAlignment="Center"></TextBox>
+            <Label Content="Prezime:" Grid.Row="2" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <TextBox x:Name="txtLastName" Grid.Row="2" Grid.Column="1" Margin="10" VerticalContentAlignment="Center"></TextBox>
+            <Label Content="Datum rođenja:" Grid.Row="3" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <DatePicker x:Name="dpBirthDate" Grid.Row="3" Grid.Column="1" Margin="10"></DatePicker>
+            <Label Content="Kontakt:" Grid.Row="4" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <TextBox x:Name="txtContact" Grid.Row="4" Grid.Column="1" Margin="10" VerticalContentAlignment="Center"></TextBox>
+            <Label Content="Rating:" Grid.Row="5" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <TextBox x:Name="txtRating" IsReadOnly="True" Grid.Row="5" Grid.Column="1" Margin="10" VerticalContentAlignment="Center"></TextBox>
+            <Label Content="Spol:" Grid.Row="6" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <RadioButton x:Name="rbMale" Content="Muško" Grid.Row="6" Grid.Column="1" Margin="10" GroupName="Gender" HorizontalAlignment="Left" />
+            <RadioButton x:Name="rbFemale" Content="Žensko" Grid.Row="6" Grid.Column="1" Margin="84,10,0,10" GroupName="Gender" HorizontalAlignment="Left" Width="87" />
+            <Label Content="Status:" Grid.Row="7" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <ComboBox x:Name="cmbStatus" Grid.Row="7" Grid.Column="1" Margin="10"></ComboBox>
+
+            <Label Content="Korisničko ime:" Grid.Row="8" Grid.Column="0" Margin="10" HorizontalContentAlignment="Right" FontWeight="Bold"></Label>
+            <TextBox x:Name="txtUsername" Grid.Row="8" Grid.Column="1" Margin="10" VerticalContentAlignment="Center"></TextBox>
+
+            <Button x:Name="btnSave" Content="Spremi" Height="30" Width="100" Background="#B0C4DE" Foreground="Black" Click="btnSave_Click" Grid.Row="10" Grid.ColumnSpan="3" Margin="10,10,157,10"></Button>
+            <Button x:Name="btnCancel" Content="Odustani" Height="30" Width="100" Click="btnCancel_Click" Grid.Row="10" Grid.ColumnSpan="3" Margin="134,10,33,10"></Button>
+
+            <TextBlock x:Name="txtErrorMessage" Grid.Row="11" Grid.ColumnSpan="3" Margin="10" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold" Visibility="Collapsed"/>
+        </Grid>
+    </DockPanel>
+</UserControl>

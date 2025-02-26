@@ -1,0 +1,38 @@
+﻿<Window x:Class="ChessTracker.AddTournamentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodaj turnir" Height="450" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Ime:" Grid.Row="0" />
+        <TextBox x:Name="TxtName" Grid.Row="1" Margin="0 0 0 10"/>
+
+        <TextBlock Text="Datum:" Grid.Row="2" />
+        <DatePicker x:Name="DpDate" Grid.Row="3" Margin="0 0 0 10"/>
+
+        <TextBlock Text="Vrijeme:" Grid.Row="4" />
+        <TextBox x:Name="TxtTime" Grid.Row="5" Margin="0 0 0  10"/>
+
+        <TextBlock Text="Mjesto:" Grid.Row="6" />
+        <TextBox x:Name="TxtPlace" Grid.Row="7" Margin="0 0 0 10"/>
+
+        <TextBlock Text="Sudac:" Grid.Row="8" />
+        <ComboBox x:Name="CmbJudges" Grid.Row="9" DisplayMemberPath="username" SelectedValuePath="judge_id" Margin="0 0 0 10"/>
+
+        <Button x:Name="BtnSave" Content="Spremi" Grid.Row="10" Width="100" HorizontalAlignment="Center" Click="BtnSave_OnClick" Height="30" Background="#B0C4DE" Foreground="Black" Margin="0 20 0 0"/>
+    </Grid>
+</Window>
