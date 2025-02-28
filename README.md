@@ -1,6 +1,8 @@
 # ChessTracker
 
+## Prezentacija projekta
 
+Prezentacija projekta dostupna je u obliku videozapisa na sljedećoj poveznici: https://www.youtube.com/watch?v=bilk97E5qSA
 
 ## Opis domene
 ChessTracker je inovativna desktop aplikacija dizajnirana za rangiranje šahovskih igrača, namijenjena šahovskim klubovima, organizatorima turnira (šahovskom savezu), sudcima i samim šahistima. Ova aplikacija pojednostavljuje proces praćenja rang-liste i upravljanja rejtingom, omogućavajući korisnicima brz i jednostavan uvid u statistiku i rezultate. Cilj aplikacije je unaprijediti organizaciju šahovskih natjecanja te olakšati vođenje evidencije o igračima, partijama i njihovim rezultatima. Ciljana skupina korisnika su nam šahovski savez koji može dodavati igrače u bazu, generira izvještaj o statistici registriranih korisnika te organizira i upravlja nadolazećim turnira; sudac koji unosi rezultate partija s turnira, provjerava ažurirane rejtinge igrača nakon svakog kola te generira rang-liste i vodi evidenciju o turnirima; klub koji ima mogućnost dodavanja, uređivanja i deaktivacije računa svojih članova, kao i prijavu igrača na turnire gdje igraju kao klub; registrirani korisnik koji prati svoj napredak, pregledava rezultate i rang-liste kako bi se usporedio s drugim igračima te ima mogućnost prijave na turnire gdje igra samostalno.
